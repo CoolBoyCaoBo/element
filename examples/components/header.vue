@@ -284,14 +284,10 @@
   <div class="headerWrapper">
     <div id="v3-banner" v-if="isHome">
       <template v-if="lang === 'zh-CN'">
-        您正在浏览基于 Vue 2.x 的文档;
-        <a href="https://element-plus.org/#/zh-CN">点击查看 Vue 3.x 版本。</a>
+        您正在浏览基于 Vue 2.x 的文档
+        <!-- <a href="https://element-plus.org/#/zh-CN">点击查看 Vue 3.x 版本。</a>
         饿了么开源了自研多端框架 MorJS，
-        <a href="https://github.com/eleme/morjs">欢迎点击查看或试用 👏🏻</a>
-      </template>
-      <template v-else>
-        You’re browsing the documentation of Element UI for Vue 2.x version.
-        <a href="https://element-plus.org">Click here</a> for Vue 3.x version
+        <a href="https://github.com/eleme/morjs">欢迎点击查看或试用 👏🏻</a> -->
       </template>
     </div>
     <header class="header" ref="header">
@@ -421,10 +417,7 @@
         verDropdownVisible: true,
         langDropdownVisible: true,
         langs: {
-          'zh-CN': '中文',
-          'en-US': 'English',
-          'es': 'Español',
-          'fr-FR': 'Français'
+          'zh-CN': '中文'
         }
       };
     },
@@ -454,16 +447,16 @@
       }
     },
     mounted() {
-      const testInnerImg = new Image();
-      testInnerImg.onload = () => {
-        this.$isEle = true;
-        ga('send', 'event', 'DocView', 'Ali', 'Inner');
-      };
-      testInnerImg.onerror = (err) => {
-        ga('send', 'event', 'DocView', 'Ali', 'Outer');
-        console.error(err);
-      };
-      testInnerImg.src = `https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/rmsportal/VmvVUItLdPNqKlNGuRHi.png?t=${Date.now()}`;
+      // const testInnerImg = new Image();
+      // testInnerImg.onload = () => {
+      //   this.$isEle = true;
+      //   ga('send', 'event', 'DocView', 'Ali', 'Inner');
+      // };
+      // testInnerImg.onerror = (err) => {
+      //   ga('send', 'event', 'DocView', 'Ali', 'Outer');
+      //   console.error(err);
+      // };
+      // testInnerImg.src = `https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/rmsportal/VmvVUItLdPNqKlNGuRHi.png?t=${Date.now()}`;
     },
     methods: {
       switchVersion(version) {
