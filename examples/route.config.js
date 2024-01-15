@@ -9,7 +9,6 @@ const LOAD_MAP = {
   }
 };
 const load = function(lang, path) {
-  console.log('lang=========', lang, 'path=========', path);
   return LOAD_MAP[lang](path);
 };
 
